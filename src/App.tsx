@@ -1,13 +1,12 @@
-import './App.css'
+import Form from './components/Form'
+// import './normalize.css'
 
 function App() {
 
   return (
-    <>
-      <div className='text-red-600'>
-        hello there
-      </div>
-    </>
+    <main className='min-w-[100vw] min-h-[100vh] main-div bg-[#eef5ff]'>
+      <Form />
+    </main>
   )
 }
 

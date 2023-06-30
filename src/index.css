@@ -1,3 +1,60 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .main-div {
+    @apply flex justify-center items-center;
+  }
+  .inputs {
+    @apply border border-gray-400 p-2 rounded-lg text-marine-blue font-semibold focus:outline-purplish-blue focus:outline-[1px];
+  }
+  .bill-card {
+    @apply w-[120px] h-[150px] border border-gray-500 rounded-md p-2 flex flex-col justify-between items-start cursor-pointer;
+  }
+  .active-card {
+    @apply border-[1.5px] border-marine-blue;
+  }
+  .addons-card {
+    @apply flex items-center justify-between border border-marine-blue p-3 rounded-md hover:border-[1.5px] hover:border-purplish-blue;
+  }
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3.5px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input[type='checkbox']:checked + .slider {
+  background-color: #2196f3;
+}
+
+input[type='checkbox']:checked + .slider:before {
+  transform: translateX(26px);
+}
